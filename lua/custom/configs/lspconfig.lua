@@ -10,3 +10,23 @@ lspconfig.pyright.setup({
     capabilities = capabilities,
     filetypes = { "python" },
 })
+
+lspconfig.eslint.setup({
+    capabilities = capabilities,
+    on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        command = "EslintFixAll",
+      })
+    end,
+})
+
+lspconfig.tsserver.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+
+lspconfig.cssls.setup ({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
