@@ -3,6 +3,7 @@ local options = {
 
     formatters_by_ft = {
         python = { "black" },
+        typescript = { "ts-standard" },
     },
 }
 
