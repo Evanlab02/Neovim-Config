@@ -6,7 +6,12 @@ local plugins = {
                 "pyright",
                 "black",
                 "flake8",
-                "mypy"
+                "mypy",
+                "eslint-lsp",
+                "eslint_d",
+                "ts-standard",
+                "typescript-language-server",
+                "cssmodules-language-server",
             },
         },
     },
