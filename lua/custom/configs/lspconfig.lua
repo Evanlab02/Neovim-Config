@@ -15,9 +15,9 @@ lspconfig.eslint.setup({
     capabilities = capabilities,
     on_attach = function(client, bufnr)
         vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        command = "EslintFixAll",
-      })
+            buffer = bufnr,
+            command = "EslintFixAll",
+        })
     end,
 })
 
@@ -26,7 +26,12 @@ lspconfig.tsserver.setup({
     on_attach = on_attach,
 })
 
-lspconfig.cssls.setup ({
+lspconfig.cssls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+
+lspconfig.cssmodules_ls.setup({
     capabilities = capabilities,
     on_attach = on_attach,
 })

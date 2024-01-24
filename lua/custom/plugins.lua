@@ -12,6 +12,7 @@ local plugins = {
                 "ts-standard",
                 "typescript-language-server",
                 "cssmodules-language-server",
+                "css-lsp",
             },
         },
     },
